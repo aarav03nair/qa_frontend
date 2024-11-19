@@ -9,7 +9,8 @@ import { io } from 'socket.io-client';
   styleUrls: ['./chat.component.css'],
 })
 export class ChatComponent implements OnInit {
-  socket = io('http://localhost:3000');
+  url: string = 'https://qa-backend-b94f.onrender.com';
+  socket = io(this.url);
   room: string = '';
   name: string = '';
   message: string = '';
