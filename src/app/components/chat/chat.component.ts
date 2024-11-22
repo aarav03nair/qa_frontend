@@ -10,6 +10,7 @@ import { io } from 'socket.io-client';
 })
 export class ChatComponent implements OnInit {
   url: string = 'https://qa-backend-b94f.onrender.com';
+  // url: string = 'https://localhost:3000';
   socket = io(this.url);
   room: string = '';
   name: string = '';
@@ -29,6 +30,13 @@ export class ChatComponent implements OnInit {
     this.socket.on('message', (message: any) => {
       this.messages.push(message);
     });
+
+    this.socket.on('upvote', ({ messageId, upvotes }) => {
+      const message = this.messages.find((m) => m._id === messageId);
+      if (message) {
+        message.upvotes = upvotes; // Update upvotes
+      }
+    });
   }
 
   loadMessages(): void {
@@ -44,5 +52,8 @@ export class ChatComponent implements OnInit {
   sendMessage(): void {
     this.socket.emit('send-message', { room: this.room, user: this.name, message: this.message });
     this.message = '';
+  }
+  upvoteMessage(messageId: string): void {
+    this.roomService.upvoteMessage(messageId).subscribe();
   }
 }

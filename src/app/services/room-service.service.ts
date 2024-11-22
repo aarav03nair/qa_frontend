@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class RoomService {
-  private baseUrl='https://qa-backend-b94f.onrender.com'
+  private baseUrl='https://qa-backend-b94f.onrender.com';
+  // private baseUrl='https://localhost:3000';
   private apiUrl = `${this.baseUrl}/api/rooms`;
   private messageUrl = `${this.baseUrl}/api/messages`;
 
@@ -27,5 +28,8 @@ export class RoomService {
 
   getMessages(room: string): Observable<any[]> {
     return this.http.get<any[]>(`${this.messageUrl}/${room}`);
+  }
+  upvoteMessage(messageId: string) {
+    return this.http.post(`${this.messageUrl}/upvote`, { messageId });
   }
 }
