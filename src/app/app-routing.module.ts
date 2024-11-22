@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateRoomComponent } from './components/create-room/create-room.component';
 import { ChatComponent } from './components/chat/chat.component';
+import { UserLoginComponent } from './components/user-login/user-login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/create-room', pathMatch: 'full' },
+  { path: '', redirectTo: '/user-login', pathMatch: 'full' },
+  { path: 'user-login', component: UserLoginComponent },
   { path: 'create-room', component: CreateRoomComponent },
   { path: 'chat', component: ChatComponent },
-  { path: '**', redirectTo: '/create-room' }, // Redirect any unknown paths to create-room
+  { path: '**', redirectTo: '/user-login' }, // Redirect any unknown paths to create-room
 ];
 
 @NgModule({
