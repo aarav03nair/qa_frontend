@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    width: 95vw;
   }
   
   .room-title {
@@ -37,11 +38,14 @@ body {
   }
   
   .message-user {
+    background-color: #282828;
     font-weight: bold;
     color: #bb86fc;
   }
   
   .message-text {
+    background-color: #282828;
+
     margin: 5px 0 0 0;
   }
   

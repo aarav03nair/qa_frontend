@@ -1,8 +1,27 @@
-<div>
+<!-- <div>
     <h2>Create or Join a Room</h2>
     <input [(ngModel)]="roomName" placeholder="Room Name">
     <input [(ngModel)]="userName" placeholder="Your Name">
     <button (click)="createRoom()">Create Room</button>
     <button (click)="joinRoom()">Join Room</button>
   </div>
-  
+   -->
+
+<div class="container">
+  <div class="card">
+    <h2>Join a Room</h2>
+    <div class="form-group">
+      <input [(ngModel)]="roomName" placeholder="Room Name">
+      <input [(ngModel)]="userName" placeholder="Your Name">
+    </div>
+    <button (click)="joinRoom()">Join Room</button>
+  </div>
+
+  <div class="card">
+    <h2>Create a Room</h2>
+    <div class="form-group">
+      <input [(ngModel)]="roomName" placeholder="New Room Name">
+    </div>
+    <button (click)="createRoom()">Create Room</button>
+  </div>
+</div>
