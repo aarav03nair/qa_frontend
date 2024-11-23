@@ -1,0 +1,86 @@
+.room-messages-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #282828; /* Dark background */
+    color: #e0e0e0; /* Light text for contrast */
+}
+
+.room-selection {
+    margin-bottom: 20px;
+    background-color: #282828; /* Ensure the selection area has the same background */
+}
+label{
+    background-color: #282828;
+}
+#room-select {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #333; /* Dark border */
+    border-radius: 5px;
+    background-color: #282828; /* Darker dropdown background */
+    color: #ffffff; /* Light text color */
+}
+
+#room-select option {
+    background-color: #282828; /* Dropdown options background */
+    color: #ffffff; /* Dropdown options text color */
+}
+
+.messages-container {
+    background-color: #282828; /* Dark container background */
+    border: 1px solid #333; /* Subtle border */
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.message-box {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #444; /* Subtle border for separation */
+    background-color: #282828; /* Match overall background */
+    border-radius: 5px;
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #282828; /* Ensure consistent background */
+}
+
+.message-user {
+    font-weight: bold;
+    color: #bb86fc; /* Accent color for usernames */
+    background-color: #282828; /* Ensure consistent background */
+}
+
+.message-text {
+    margin: 5px 0;
+    color: #e0e0e0; /* Light text color */
+    background-color: #282828; /* Ensure consistent background */
+}
+
+.message-upvotes {
+    font-size: 14px;
+    color: #f5f5f5; /* Light text for upvotes */
+    background-color: #282828; /* Ensure consistent background */
+}
+
+.message-timestamp {
+    font-size: 12px;
+    color: #888; /* Subtle text for timestamps */
+    background-color: #282828; /* Ensure consistent background */
+}
+
+.noMessages {
+    color: #e0e0e0; /* Light text */
+    background-color: #282828; /* Ensure consistent background */
+}
+
+h3 {
+    color: #e0e0e0; /* Light text for headings */
+    background-color: #282828; /* Ensure consistent background */
+}
+
+.wrapperBox{
+    background-color: #282828;
+}

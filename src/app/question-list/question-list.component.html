@@ -1,0 +1,32 @@
+<div class="room-messages-container">
+    <div class="room-selection">
+      <label for="room-select">Select a Speaker:</label>
+      <select id="room-select" [(ngModel)]="selectedRoom" (change)="fetchMessages()">
+         <option value="0930">DR. SATISH PALAYAM.</option>
+        <option value="1035">DR. PANKAJ CHIVTE</option>
+        <option value="1140">DR. FRANK ZASTROW</option>
+        <option value="1245">DR. RATNADEEP JADHAV</option>
+        <option value="0230">DR. SAM OMAR</option>
+        <option value="0340">DR. LAURENT SERS</option>
+        <option value="0445">DR. DAEHEE LEE</option>
+      </select>
+    </div>
+  
+    <div *ngIf="selectedRoom" class="messages-container">
+      <!-- <h3>Messages in {{ selectedRoom }}</h3> -->
+      <div *ngIf="messages.length > 0; else noMessages" class="wrapperBox">
+        <div *ngFor="let message of messages" class="message-box">
+          <div class="message-content">
+            <strong class="message-user">{{ message.user }}</strong>
+            <p class="message-text">{{ message.text }}</p>
+            <p class="message-upvotes">Upvotes: {{ message.upvotes }}</p>
+            <!-- <small class="message-timestamp">{{ message.timestamp | date: 'short' }}</small> -->
+          </div>
+        </div>
+      </div>
+      <ng-template #noMessages>
+        <p class="noMessages">No messages for the Speaker</p>
+      </ng-template>
+    </div>
+  </div>
+  

@@ -8,6 +8,7 @@ import { CreateRoomComponent } from './components/create-room/create-room.compon
 import { ChatComponent } from './components/chat/chat.component';
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { LoadingComponent } from './loading/loading.component';
+import { QuestionListComponent } from './question-list/question-list.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LoadingComponent } from './loading/loading.component';
     CreateRoomComponent,
     ChatComponent,
     UserLoginComponent,
-    LoadingComponent
+    LoadingComponent,
+    QuestionListComponent
   ],
   imports: [
     BrowserModule,
