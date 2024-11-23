@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class UserLoginComponent {
   roomName: string = '';
   userName: string = '';
-
+  loading: boolean = false;
   constructor(private roomService: RoomService, private router: Router) {}
 
   createRoom(): void {
@@ -22,10 +22,13 @@ export class UserLoginComponent {
   }
 
   joinRoom(): void {
+    this.loading=true;
     this.roomService.joinRoom(this.roomName, this.userName).subscribe(() => {
       this.router.navigate(['/chat'], {
         queryParams: { room: this.roomName, name: this.userName },
       });
+      this.loading=false;
     });
+    this.loading=false;
   }
 }
